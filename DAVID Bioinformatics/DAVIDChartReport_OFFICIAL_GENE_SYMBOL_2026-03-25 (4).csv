@@ -1,0 +1,7 @@
+"Category","Term","Count","List Total","Pop Hits","Pop Total","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"OMIM_DISEASE","Ovarian cancer, somatic","4","30","7","5045","5.89e-6","2.65e-4","96.10","5.30e-4","2.65e-4","3.51e-8","PIK3CA,CDH1,ERBB2,AKT1"
+"OMIM_DISEASE","Breast cancer, somatic","4","30","7","5045","5.89e-6","2.65e-4","96.10","5.30e-4","2.65e-4","3.51e-8","PIK3CA,AKT1,ESR1,TP53"
+"OMIM_DISEASE","Hepatocellular carcinoma, somatic","2","30","6","5045","3.40e-2","1.00e+0","56.06","9.56e-1","1.00e+0","5.05e-4","PIK3CA,TP53"
+"OMIM_DISEASE","Gastric cancer, somatic","2","30","9","5045","5.06e-2","1.00e+0","37.37","9.91e-1","1.00e+0","1.20e-3","PIK3CA,ERBB2"
+"OMIM_DISEASE","Colorectal cancer, somatic","2","30","17","5045","9.35e-2","1.00e+0","19.78","1.00e+0","1.00e+0","4.40e-3","PIK3CA,AKT1"
+

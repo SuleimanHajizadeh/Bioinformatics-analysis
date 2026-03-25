@@ -1,0 +1,5 @@
+"Cluster","Cluster Enrichment Score","Category","Term","Count","List Total","Pop Hits","Pop Total","%","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"1","0.03","PIR_SEQ_FEATURE","domain: transmembrane","3","15","384","1873","5.66","8.15e-1","1.00e+0","0.98","1.00e+0","1.00e+0","6.21e-1","MUC1,CDH1,EGFR"
+"1","0.03","PIR_SEQ_FEATURE","binding site: carbohydrate","3","15","621","1873","5.66","9.72e-1","1.00e+0","0.60","1.00e+0","1.00e+0","9.19e-1","MUC1,CDH1,EGFR"
+"1","0.03","PIR_SEQ_FEATURE","domain: signal sequence","3","15","733","1873","5.66","9.91e-1","1.00e+0","0.51","1.00e+0","1.00e+0","9.69e-1","MUC1,CDH1,EGFR"
+

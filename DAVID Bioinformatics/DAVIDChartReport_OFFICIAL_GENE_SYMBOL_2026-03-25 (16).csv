@@ -1,0 +1,5 @@
+"Category","Term","Count","List Total","Pop Hits","Pop Total","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"UP_KW_LIGAND","ATP-binding","21","33","1439","6897","3.62e-7","3.99e-6","3.05","3.99e-6","3.99e-6","1.17e-7","TOP2A,UBE2C,PLK1,TTK,MKI67,EGFR,ACTB,AURKA,MELK,PIK3CA,CDK4,ERBB2,CHEK1,PBK,AKT1,NEK2,KIF2C,KIF20A,TK1,BUB1,MCM2"
+"UP_KW_LIGAND","Nucleotide-binding","22","33","1863","6897","5.39e-6","2.97e-5","2.47","5.93e-5","2.97e-5","2.15e-6","TOP2A,UBE2C,PLK1,TTK,MKI67,EGFR,ACTB,AURKA,MELK,PIK3CA,CDK4,ERBB2,CHEK1,PBK,AKT1,NEK2,KIF2C,KIF20A,TK1,GAPDH,BUB1,MCM2"
+"UP_KW_LIGAND","Steroid-binding","2","33","19","6897","8.47e-2","3.10e-1","22.00","6.22e-1","3.10e-1","3.61e-3","PGR,ESR1"
+

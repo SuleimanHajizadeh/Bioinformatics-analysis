@@ -1,0 +1,5 @@
+"Cluster","Cluster Enrichment Score","Category","Term","Count","List Total","Pop Hits","Pop Total","%","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"1","0.03","UP_KW_DOMAIN","Transmembrane","9","26","5754","14207","16.98","8.58e-1","1.00e+0","0.85","1.00e+0","1.00e+0","7.90e-1","MUC1,CDH1,MYC,ERBB2,BRCA1,BRCA2,ESR1,TP53,EGFR"
+"1","0.03","UP_KW_DOMAIN","Transmembrane helix","8","26","5708","14207","15.09","9.29e-1","1.00e+0","0.77","1.00e+0","1.00e+0","8.82e-1","MUC1,CDH1,MYC,ERBB2,BRCA1,BRCA2,TP53,EGFR"
+"1","0.03","UP_KW_DOMAIN","Signal","4","26","4232","14207","7.55","9.91e-1","1.00e+0","0.52","1.00e+0","1.00e+0","9.73e-1","MUC1,CDH1,ERBB2,EGFR"
+
