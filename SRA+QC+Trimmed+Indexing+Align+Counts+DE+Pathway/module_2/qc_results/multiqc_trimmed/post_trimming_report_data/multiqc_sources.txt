@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	sample_R1_paired	/bioinformatics/module_2/qc_results/fastqc_trimmed/sample_R1_paired_fastqc.zip
+FastQC	all_sections	sample_R2_paired	/bioinformatics/module_2/qc_results/fastqc_trimmed/sample_R2_paired_fastqc.zip

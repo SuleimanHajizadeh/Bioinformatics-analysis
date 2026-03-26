@@ -1,0 +1,26 @@
+nohup: ignoring input
+=== Mühit Yüklənir ===
+======================================
+        İşlənən Nümunə: SRR1553606       
+======================================
+1. Downloading SRR1553606 (prefetch & fasterq-dump)...
+2026-03-24T18:59:33 prefetch.3.2.1: 1) Resolving 'SRR1553606'...
+2026-03-24T18:59:35 prefetch.3.2.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-03-24T18:59:35 prefetch.3.2.1: 1) 'SRR1553606' is found locally 
+2026-03-24T18:59:35 prefetch.3.2.1: 1) Resolving 'SRR1553606's dependencies...
+2026-03-24T18:59:36 prefetch.3.2.1: 'SRR1553606' has 0 unresolved dependencies
+spots read      : 377,961
+reads read      : 755,922
+reads written   : 755,922
+2. Trimming SRR1553606 (Trimmomatic)...
+TrimmomaticPE: Started with arguments:
+ -threads 30 /bioinformatics/module_2/reads/SRR1553606_1.fastq /bioinformatics/module_2/reads/SRR1553606_2.fastq SRR1553606_1_paired.fastq SRR1553606_1_unpaired.fastq SRR1553606_2_paired.fastq SRR1553606_2_unpaired.fastq ILLUMINACLIP:/bioinformatics/miniconda3/envs/rna_seq_env/share/trimmomatic-0.40-0/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+ILLUMINACLIP: Using adapter file from user-specified absolute path: /bioinformatics/miniconda3/envs/rna_seq_env/share/trimmomatic-0.40-0/adapters/TruSeq3-PE.fa
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Quality encoding detected as phred33
+Input Read Pairs: 377961 Both Surviving: 280823 (74.30%) Forward Only Surviving: 93697 (24.79%) Reverse Only Surviving: 1502 (0.40%) Dropped: 1939 (0.51%)
+TrimmomaticPE: Completed successfully
+3. HISAT2 Alignment SRR1553606...
+(ERR): "/bioinformatics/module_2/references/full_genome/hg38/hg38_genome" does not exist
+Exiting now ...

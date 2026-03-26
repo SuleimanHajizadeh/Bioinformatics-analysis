@@ -1,0 +1,108 @@
+---
+title: "DESeq2 Analizi: Tumor vs Normal"
+author: "Antigravity RNA-Seq Vizuallaşdırma"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+# Lazımi paketləri yükləyirik
+library(DESeq2)
+library(ggplot2)
+library(plotly)
+library(pheatmap)
+library(DT)
+```
+
+## 1. Məlumatın Yüklənməsi və DESeq2 Analizi
+
+Aşağıdakı bölmədə verilənlər matrisi (`counts`) və xəstə məlumatları (`metadata`) oxunur və DESeq2 hesablama modelindən keçirilir.
+
+```{r data_proc}
+counts_file <- "/bioinformatics/module_2/hcc1395_hisat2/final_counts.csv"
+meta_file   <- "/bioinformatics/module_2/hcc1395_hisat2/metadata.csv"
+
+counts_data <- read.csv(counts_file, row.names = 1)
+colnames(counts_data) <- c("SRR1553607", "SRR1553606", "SRR1553608")
+col_data <- read.csv(meta_file, row.names = 1)
+col_data <- col_data[match(colnames(counts_data), rownames(col_data)), , drop = FALSE]
+
+dds <- DESeqDataSetFromMatrix(countData = counts_data,
+                              colData = col_data,
+                              design = ~ Condition)
+
+# Çox aşağı "count"-lu genləri silmək
+keep <- rowSums(counts(dds)) >= 10
+dds <- dds[keep,]
+
+# Diferensial Modelin İşə Düşməsi
+dds <- DESeq(dds)
+res <- results(dds, contrast=c("Condition", "Tumor", "Normal"))
+res_ordered <- res[order(res$padj),]
+
+# Variance Stabilizing Transformation (VST) grafiklər üçün
+vsd <- varianceStabilizingTransformation(dds, blind=FALSE)
+```
+
+---
+
+## 2. Keyfiyyət Nəzarəti (QC)
+
+### A. İnteraktiv PCA (Principal Components Analysis) Qrafiki
+Eyni bioloji qrupa (Normal və ya Tumor) aid nümunələrin nə dərəcədə bir-birinə yaxın olduğunu görə bilərsiniz. Üzərinə gələrək nümunənin adını oxuya bilərsiniz:
+
+```{r pca, fig.width=8, fig.height=5}
+pca_data <- plotPCA(vsd, intgroup="Condition", returnData=TRUE)
+percentVar <- round(100 * attr(pca_data, "percentVar"))
+
+p <- ggplot(pca_data, aes(x=PC1, y=PC2, color=Condition, text=name)) +
+  geom_point(size=5, alpha=0.8) +
+  xlab(paste0("PC1: ", percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ", percentVar[2], "% variance")) +
+  theme_minimal() +
+  ggtitle("Nümunələrin İnteraktiv PCA Ayrılması")
+
+# Dəyişənləri Plotly ilə vizuallaşdırmaq
+ggplotly(p, tooltip = c("text", "Condition", "x", "y"))
+```
+
+### B. Nümunələrarası Məsafə (Heatmap)
+Aşağıdakı heatmap matrisi vasitəsilə nümunələr arasındakı genetik oxşarlıq "məsafəsi" yoxlanılır.
+
+```{r heatmap, fig.width=7, fig.height=6}
+sampleDists <- dist(t(assay(vsd)))
+sampleDistMatrix <- as.matrix(sampleDists)
+colnames(sampleDistMatrix) <- NULL
+
+pheatmap(sampleDistMatrix,
+         clustering_distance_rows = sampleDists,
+         clustering_distance_cols = sampleDists,
+         main = "Sample-to-Sample Distances",
+         color = colorRampPalette(rev(RColorBrewer::brewer.pal(9, "Blues")))(255))
+```
+
+---
+
+## 3. Diferensial İfadə Edilən Genlər (Axtarış Cədvəli)
+
+Statistik analiz nəticəsində əldə olunan dəyərlər (p-value, padj, Fold Change). Axtarış düyməsindən xüsusi gen (məsələn, `TOB2`) tapıla bilər!
+
+```{r dt_table}
+res_df <- as.data.frame(res_ordered)
+res_df$Gene <- rownames(res_df)
+res_df <- res_df[, c("Gene", "baseMean", "log2FoldChange", "pvalue", "padj")]
+
+# DataTables (DT) widget-i yaradırıq
+datatable(res_df, 
+          options = list(pageLength = 10, searchHighlight = TRUE), 
+          rownames = FALSE,
+          caption = "Top Fərqlənən Genlər Siyahısı (Tumor vs Normal)") %>%
+  formatRound(columns=c('baseMean', 'log2FoldChange'), digits=3) %>%
+  formatSignif(columns=c('pvalue', 'padj'), digits=3)
+```
