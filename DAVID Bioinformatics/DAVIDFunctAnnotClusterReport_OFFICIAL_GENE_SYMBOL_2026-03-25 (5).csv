@@ -1,0 +1,5 @@
+"Cluster","Cluster Enrichment Score","Category","Term","Count","List Total","Pop Hits","Pop Total","%","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"1","7.50","UP_KW_CELLULAR_COMPONENT","Chromosome","15","48","648","17641","28.30","7.88e-10","9.06e-9","8.51","1.81e-8","7.88e-9","9.04e-11","PLK1,NCAPG,BRCA1,MKI67,CENPA,CDC20,MYC,CHEK1,BIRC5,NEK2,KIF2C,DTL,BUB1,MCM2,MAD2L1"
+"1","7.50","UP_KW_CELLULAR_COMPONENT","Centromere","8","48","149","17641","15.09","1.26e-7","7.25e-7","19.73","2.90e-6","6.31e-7","6.08e-9","CDC20,PLK1,BIRC5,KIF2C,NEK2,CENPA,BUB1,MAD2L1"
+"1","7.50","UP_KW_CELLULAR_COMPONENT","Kinetochore","7","48","104","17641","13.21","3.20e-7","1.47e-6","24.74","7.37e-6","1.28e-6","1.22e-8","CDC20,PLK1,BIRC5,KIF2C,NEK2,BUB1,MAD2L1"
+

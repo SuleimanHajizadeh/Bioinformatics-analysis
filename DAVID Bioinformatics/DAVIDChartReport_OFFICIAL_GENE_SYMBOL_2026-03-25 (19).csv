@@ -1,0 +1,4 @@
+"Category","Term","Count","List Total","Pop Hits","Pop Total","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"PIR_SUPERFAMILY","TyrPK_EGF-R","2","12","4","1924","2.27e-2","1.36e-1","80.17","2.41e-1","1.36e-1","2.13e-4","ERBB2,EGFR"
+"PIR_SUPERFAMILY","Cyclin_A_B_D_E","2","12","4","1924","2.27e-2","1.36e-1","80.17","2.41e-1","1.36e-1","2.13e-4","CCNB2,CCNB1"
+

@@ -1,0 +1,5 @@
+counts_data <- read.csv("tnbc_gene_counts.csv", row.names = 1, check.names = FALSE)
+coldata <- read.csv("tnbc_phenotypes.csv", row.names = 1)
+print(head(colnames(counts_data)))
+print(head(rownames(coldata)))
+print(all(colnames(counts_data) %in% rownames(coldata)))

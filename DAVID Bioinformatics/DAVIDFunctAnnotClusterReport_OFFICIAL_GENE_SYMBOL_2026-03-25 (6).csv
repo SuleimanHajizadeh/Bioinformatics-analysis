@@ -1,0 +1,5 @@
+"Cluster","Cluster Enrichment Score","Category","Term","Count","List Total","Pop Hits","Pop Total","%","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"1","5.33","UP_KW_MOLECULAR_FUNCTION","Serine/threonine-protein kinase","11","43","394","11766","20.75","8.92e-7","1.64e-5","7.64","2.50e-5","1.41e-5","1.13e-7","MELK,PIK3CA,CDK4,PLK1,CHEK1,PBK,AKT1,TTK,NEK2,BUB1,AURKA"
+"1","5.33","UP_KW_MOLECULAR_FUNCTION","Kinase","14","43","750","11766","26.42","1.17e-6","1.64e-5","5.11","3.28e-5","1.41e-5","2.24e-7","PLK1,TTK,EGFR,AURKA,MELK,PIK3CA,CDK4,ERBB2,CHEK1,PBK,AKT1,NEK2,TK1,BUB1"
+"1","5.33","UP_KW_MOLECULAR_FUNCTION","Transferase","19","43","2048","11766","35.85","1.01e-4","9.42e-4","2.54","2.82e-3","8.07e-4","3.89e-5","UBE2C,PLK1,TTK,BRCA1,TYMS,EGFR,AURKA,MELK,PIK3CA,CDK4,ERBB2,CHEK1,PBK,AKT1,NEK2,TK1,GAPDH,BUB1,EZH2"
+

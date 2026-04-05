@@ -1,0 +1,4 @@
+"Category","Term","Count","List Total","Pop Hits","Pop Total","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"UP_KW_DISEASE","Proto-oncogene","7","31","234","4859","2.62e-3","5.34e-2","4.69","5.36e-2","5.34e-2","5.35e-4","PTTG1,CCND1,PIK3CA,MYC,AKT1,EGFR,AURKA"
+"UP_KW_DISEASE","Tumor suppressor","6","31","186","4859","5.09e-3","5.34e-2","5.06","1.02e-1","5.34e-2","9.60e-4","RB1,MUC1,PTEN,BRCA1,BRCA2,TP53"
+

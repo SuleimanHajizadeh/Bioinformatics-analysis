@@ -1,0 +1,6 @@
+"Category","Term","Count","List Total","Pop Hits","Pop Total","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"SMART","S_TKc","10","45","363","10449","1.61e-5","8.22e-4","6.40","8.21e-4","8.22e-4","2.44e-6","MELK,CDK4,PLK1,CHEK1,PBK,AKT1,TTK,NEK2,BUB1,AURKA"
+"SMART","CYCLIN","4","45","36","10449","4.51e-4","1.15e-2","25.80","2.28e-2","1.15e-2","1.60e-5","RB1,CCNB2,CCNB1,CCND1"
+"SMART","Cyclin_C","3","45","19","10449","2.83e-3","4.81e-2","36.66","1.35e-1","4.81e-2","6.89e-5","CCNB2,CCNB1,CCND1"
+"SMART","FU","2","45","18","10449","7.32e-2","9.33e-1","25.80","9.79e-1","9.33e-1","2.66e-3","ERBB2,EGFR"
+

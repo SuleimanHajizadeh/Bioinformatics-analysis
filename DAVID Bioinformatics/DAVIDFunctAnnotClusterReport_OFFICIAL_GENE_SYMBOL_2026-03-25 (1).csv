@@ -1,0 +1,5 @@
+"Cluster","Cluster Enrichment Score","Category","Term","Count","List Total","Pop Hits","Pop Total","%","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"1","1.52","GAD_DISEASE_CLASS","UNKNOWN","17","50","1601","12770","32.08","1.99e-4","8.95e-4","2.71","3.57e-3","4.97e-4","7.15e-5","KRT8,BRCA1,GATA3,TYMS,BRCA2,ESR1,EGFR,AURKA,MUC1,KRT18,PIK3CA,CCND1,ERBB2,BIRC5,AKT1,PGR,TP53"
+"1","1.52","GAD_DISEASE_CLASS","INFECTION","11","50","2132","12770","20.75","2.95e-1","4.09e-1","1.32","9.98e-1","2.95e-1","2.03e-1","MUC1,PIK3CA,CDH1,KRT8,AKT1,PGR,GATA3,ESR1,TP53,EGFR,MAD2L1"
+"1","1.52","GAD_DISEASE_CLASS","PSYCH","9","50","1958","12770","16.98","4.84e-1","5.81e-1","1.17","1.00e+0","4.84e-1","3.57e-1","MUC1,PIK3CA,PTEN,AKT1,PGR,TYMS,ESR1,TP53,EGFR"
+

@@ -1,0 +1,6 @@
+"Cluster","Cluster Enrichment Score","Category","Term","Count","List Total","Pop Hits","Pop Total","%","P-Value","Benjamini","Fold Enrichment","Bonferroni","FDR","Fisher Exact","User Ids"
+"1","0.00","UP_SEQ_FEATURE","TOPO_DOM:Extracellular","4","53","2948","19804","7.55","9.88e-1","1.00e+0","0.51","1.00e+0","9.97e-1","9.66e-1","MUC1,CDH1,ERBB2,EGFR"
+"1","0.00","UP_SEQ_FEATURE","TRANSMEM:Helical","8","53","5244","19804","15.09","9.93e-1","1.00e+0","0.57","1.00e+0","9.97e-1","9.84e-1","MUC1,CDH1,MYC,ERBB2,BRCA1,BRCA2,TP53,EGFR"
+"1","0.00","UP_SEQ_FEATURE","TOPO_DOM:Cytoplasmic","4","53","3857","19804","7.55","9.99e-1","1.00e+0","0.39","1.00e+0","9.99e-1","9.96e-1","MUC1,CDH1,ERBB2,EGFR"
+"1","0.00","UP_SEQ_FEATURE","CARBOHYD:N-linked (GlcNAc...) asparagine","4","53","4335","19804","7.55","1.00e+0","1.00e+0","0.34","1.00e+0","1.00e+0","9.99e-1","MUC1,CDH1,ERBB2,EGFR"
+
