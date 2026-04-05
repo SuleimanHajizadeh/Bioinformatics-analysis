@@ -1,0 +1,6 @@
+miniconda3/
+*.fastq
+*.sam
+reads/
+trimmed_reads/
+*.rds
