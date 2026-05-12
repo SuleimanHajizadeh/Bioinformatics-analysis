@@ -4,3 +4,4 @@ miniconda3/
 reads/
 trimmed_reads/
 *.rds
+variant_summary.txt*
