@@ -1,74 +1,88 @@
-# Multi-Omics Framework: Transcriptomic Pipelines and Breast Carcinoma Characterization
+# 🧬 Transcriptomic Pipelines and TNBC Carcinoma Characterization
 
-[![Bioinformatics](https://img.shields.io/badge/Bioinformatics-Pipeline-blue.svg)](https://github.com/SuleimanHajizadeh/bioinformatics-analysis)
-[![Status](https://img.shields.io/badge/Status-Manuscript--Ready-green.svg)](https://github.com/SuleimanHajizadeh/bioinformatics-analysis)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Bioinformatics](https://img.shields.io/badge/Bioinformatics-RNA--seq-blue.svg?style=flat-square)]()
+[![Status](https://img.shields.io/badge/Status-Under_Review-red.svg?style=flat-square)]()
+[![Method](https://img.shields.io/badge/Method-DESeq2_|_ML_|_Network_Analysis-orange.svg?style=flat-square)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-## Overview
+> 📢 **Manuscript Status:** The primary findings of this repository are currently **Under Review at PLOS ONE** (Submitted: May 2026).
+> *Title: Integrative Transcriptomic Profiling of the Tumor Microenvironment and Identification of Prognostic Biomarkers in Triple-Negative Breast Cancer*
 
-This repository integrates high-throughput sequencing pipelines and specialized transcriptomic characterization workflows. The primary focus is the molecular profiling of Triple-Negative Breast Cancer (TNBC), utilizing differential expression analysis (DESeq2), tumor microenvironment (TME) deconvolution, and pathway topology mapping across bulk and single-cell datasets.
+## 📌 Overview
 
----
-
-## Technical Inventory and Project Architecture
-
-The analytical assets are categorized by their role in the transcriptomic z-chain:
-
-### 1. High-Resolution TNBC Characterization ([Module 4](./module_4_tnbc_paper/))
-Contains primary research manuscript drafts and publication-ready metadata.
-- **Key Signatures:** Analysis of **CXCL13**, **PDCD1**, and **CTLA4** immune-hot phenotypes.
-- **Regulatory Networks:** Characterization of PI3K-Akt signaling hyperactivation in malignant biopsies.
-- **Data Source:** Processed results from **GSE142731** and **GSE58135**.
-
-### 2. QC Benchmarking and Technical Validation ([Analyzing/](./Analyzing/))
-Technical validation reports for dataset integrity.
-- **Samples:** FastQC metrics for **HBR_Rep1** and **HBR_Rep2** (HRCC-ordered ERCC-Mix2 transcripts).
-- **Format:** Comprehensive HTML and ZIP archives for sequencing quality assessment (R1/R2 reads).
-
-### 3. Functional Annotation and Target Reporting ([DAVID Bioinformatics/](./DAVID%20Bioinformatics/))
-Detailed functional and biological process reports (Dated 2026-03-25) for core targets:
-- **Malignant Markers:** `AKT1`, `AURKA`, `BIRC5`.
-- **References:** `ACTB` (Actin Beta) housekeeping gene reports in CSV, PDF, and XLSX formats.
-
-### 4. Pathway Topology and Visualization ([Reactome/](./Reactome/))
-Spatial mapping of molecular signaling pathways.
-- **Assets:** Reacfoam visualizations and pathway screenshots (March 28, 2026).
-- **Pathways:** Integrated analysis of signaling cascades via the Reactome Database.
-
-### 5. Automated Pipeline Archives ([SRA+QC+...](./SRA+QC+Trimmed+Indexing+Align+Counts+DE+Pathway/))
-A systematic, shell-driven environment for end-to-end RNA-Seq processing.
-- **Core Script:** `setup_rna_seq.sh` - Automated environment and directory configuration.
-- **Modular Layout:** Archive of `module_1`, `module_2`, and `module_3_single_cell_small` benchmarking projects.
+This repository integrates high-throughput sequencing pipelines and specialized transcriptomic characterization workflows. The primary focus is the molecular profiling of **Triple-Negative Breast Cancer (TNBC)**, utilizing differential expression analysis (DESeq2), tumor microenvironment (TME) deconvolution, and systems biology network mapping.
 
 ---
 
-## Pipeline Implementation
+## 🔬 Core Findings & Visualizations (Module 4)
+
+Our transcriptomic analysis pipeline yielded significant insights into the TNBC microenvironment. Below are key visual outputs generated from the analyzed datasets (e.g., GSE142731).
+
+### 1. Differential Expression & Immune Hot Phenotypes
+Identification of significantly upregulated immune-related genes (e.g., CXCL13, PDCD1) in TNBC compared to normal tissue.
+
+<p align="center">
+  <img src="module_4_tnbc_paper/Volcano_plot.png" alt="TNBC Volcano Plot" width="600"/>
+</p>
+
+### 2. Tumor Microenvironment (TME) Deconvolution
+Quantification of infiltrating immune cell populations within the tumor microenvironment.
+
+<p align="center">
+  <img src="module_4_tnbc_paper/TME_Deconvolution_Barplot.png" alt="TME Deconvolution" width="600"/>
+</p>
+
+### 3. Systems Biology Network
+Co-expression network mapping highlighting hub genes and regulatory interactions (e.g., PI3K-Akt signaling hyperactivation).
+
+<p align="center">
+  <img src="module_4_tnbc_paper/Systems_Biology_Network.png" alt="Systems Biology Network" width="600"/>
+</p>
+
+---
+
+## 🗂️ Technical Inventory and Architecture
+
+### 1. TNBC Research Manuscript ([`module_4_tnbc_paper/`](./module_4_tnbc_paper/))
+Contains primary research manuscript drafts (`.docx`, `.pdf`), high-resolution figures, and the final zipped submission for PLOS ONE.
+
+### 2. End-to-End RNA-Seq Pipeline ([`SRA+QC+.../`](./SRA+QC+Trimmed+Indexing+Align+Counts+DE+Pathway/))
+A systematic, shell-driven environment for raw data processing.
+- **`setup_rna_seq.sh`**: Automated environment and directory configuration.
+- Includes pre-processing modules: SRA downloading, FastQC validation, read trimming (Trimmomatic), and alignment (HISAT2).
+
+### 3. Personal Clinical Genomics ([`MyHeritage/`](./MyHeritage/))
+Python-based scripts (`analyze_dna.py`, `clinvar_annotator.py`) designed to annotate 609K personal SNPs against the NIH ClinVar database for pharmacogenomic interpretation.
+
+### 4. Pathway Topology ([`Reactome/`](./Reactome/) & `DAVID/`)
+Spatial mapping of molecular signaling pathways and functional enrichment outputs (GO/KEGG).
+
+---
+
+## ⚙️ Pipeline Implementation
 
 ### Environment and Dependencies
-The project utilizes a dedicated **Conda** environment on an **AlmaLinux 9** server.
-- **Mapping:** HISAT2 (GRCh38 Indexing).
-- **Quantification:** Subread (featureCounts).
-- **Normalization/DE:** R/DESeq2.
+The project utilizes a dedicated Conda environment on an **AlmaLinux 9** server.
+- **Mapping:** HISAT2 (GRCh38 Indexing)
+- **Quantification:** Subread (`featureCounts`)
+- **Differential Expression:** R / `DESeq2`
+- **Machine Learning:** `scikit-learn` (PCA, Random Forest)
 
 ### Execution Trace
-To initialize the research environment and run the core quantification:
 ```bash
-# Initialize repository structure
+# 1. Initialize repository structure and raw data handling
 bash SRA+QC+Trimmed+Indexing+Align+Counts+DE+Pathway/setup_rna_seq.sh
 
-# Run Differential Expression (Module 4)
+# 2. Run Differential Expression and Plotting (Module 4)
 bash module_4_tnbc_paper/scripts/run_deseq.sh
 ```
 
 ---
 
-## Contact
-
-**Suleiman Hajizadeh**  
-Lead Investigator @ Western Caspian University, Azerbaijan  
-- **Email:** suleyman.hacizade1@gmail.com  
-- **Expertise:** Omics Integration, Precision Oncology, Pathogen Genomics
+## 🎓 Academic Context
+This repository demonstrates an end-to-end capability in **Computational Biology**, transitioning from raw high-throughput sequencing data to publication-ready systems biology insights and clinical genomic interpretation.
 
 ---
-> [!NOTE]
-> All analytical results are accompanied by their corresponding source metrics (FastQC/DAVID). For access to high-volume RDS data (>100MB), refer to the provided remote synchronization protocols.
+
+**Author:** Suleiman Hajizadeh | Bioinformatician @ IMBB, Azerbaijan
+📧 suleyman.hacizade1@gmail.com
