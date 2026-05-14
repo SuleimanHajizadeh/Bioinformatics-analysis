@@ -18,23 +18,11 @@ Our transcriptomic analysis pipelines yielded significant data-driven insights. 
 ### 1. Differential Expression & Immunological Profiling
 Statistical identification of significantly dysregulated genes through bulk RNA-seq analysis.
 
-<p align="center">
-  <img src="module_4_tnbc_paper/Volcano_plot.png" alt="Volcano Plot" width="600"/>
-</p>
-
 ### 2. Tumor Microenvironment (TME) Deconvolution
 Computational estimation of infiltrating immune cell populations from bulk transcriptomic profiles.
 
-<p align="center">
-  <img src="module_4_tnbc_paper/TME_Deconvolution_Barplot.png" alt="TME Deconvolution" width="600"/>
-</p>
-
 ### 3. Systems Biology Network
 Co-expression network mapping highlighting hub genes and critical regulatory interactions in the generated datasets.
-
-<p align="center">
-  <img src="module_4_tnbc_paper/Systems_Biology_Network.png" alt="Systems Biology Network" width="600"/>
-</p>
 
 ---
 
