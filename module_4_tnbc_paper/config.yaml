@@ -1,0 +1,6 @@
+# config.yaml
+sample_id: "SRR16800543"
+gtf_path: "data/reference/grch38.gtf"
+reference_index: "data/reference/grch38_index"
+adapters_path: "data/adapters.fa"
+threads: 4
