@@ -79,6 +79,44 @@ A high-throughput Python script mapping personal genomic SNP microarray data (60
 
 ---
 
+## 🔬 Mathematical & Statistical Foundations
+
+To model high-throughput sequencing data and control for false positives under multiple testing, our workflows implement the following mathematical frameworks:
+
+### 1. The Negative Binomial Model for Read Counts
+Read count data are discrete, non-negative, and biologically overdispersed (variance exceeds the mean). We model the count $X$ of reads mapped to gene $g$ in sample $i$ as:
+$$X \sim \text{NB}(\mu, \alpha)$$
+
+Under this distribution, the mean-variance relationship is non-linear:
+$$\text{Var}(X) = \mu + \alpha \mu^2$$
+where $\mu$ is the mean expression level and $\alpha$ is the **dispersion parameter** representing biological coefficient of variation ($BCV = \sqrt{\alpha}$). As $\alpha \to 0$, the model collapses to the standard Poisson distribution ($\text{Var}(X) \to \mu$).
+
+---
+
+### 2. Multiple Testing Correction: Benjamini-Hochberg FDR
+Testing $m \approx 20,000$ genes simultaneously at significance level $\alpha = 0.05$ yields approximately 1,000 expected false positives. To control the **False Discovery Rate (FDR)**, we apply the Benjamini-Hochberg procedure:
+1. Sort raw p-values in ascending order: $P_{(1)} \le P_{(2)} \le \dots \le P_{(m)}$.
+2. Find the largest index $k$ such that:
+   $$P_{(k)} \le \frac{k}{m} q$$
+   where $q$ is the target FDR (typically 0.05).
+3. Reject $H_0$ for all genes with index $i \le k$. The adjusted p-value is defined as:
+   $$q_i = \min \left( \min_{j \ge i} \left\{ \frac{m \cdot P_{(j)}}{j} \right\}, 1 \right)$$
+
+---
+
+### 3. Homoscedastic Normalization via Variance Stabilizing Transformation (VST)
+High-throughput count data exhibit strong mean-variance dependencies (heteroscedasticity). Standard ML algorithms (PCA, Random Forests) require homoscedasticity. We apply the VST from the fitted mean-dispersion trend:
+$$y = \int \frac{1}{\sqrt{h(\mu)}} d\mu \quad \text{where } h(\mu) = \mu + \alpha \mu^2$$
+This transformation yields normalized values where variance is independent of the mean.
+
+---
+
+### 4. Generalized Linear Models (GLM) for Batch Correction
+To estimate treatment effects while controlling for systematic technical variations (batch effects), we model the expected count $\mu_{ij}$ using a GLM with logarithmic link function:
+$$\log(\mu_{ij}) = \beta_0 + \beta_{\text{batch}} X_{i,\text{batch}} + \beta_{\text{condition}} X_{i,\text{condition}}$$
+
+---
+
 ## ⚙️ Automated Workflow & Reproducibility (Snakemake)
 
 The bulk RNA-Seq pipeline is automated using the **Snakemake** workflow manager to ensure scalability and reproducibility:
