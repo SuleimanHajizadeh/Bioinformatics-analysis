@@ -158,7 +158,7 @@ This repository is optimized for academic peer review. The statistical foundatio
 *   Benjamini-Hochberg False Discovery Rate (FDR) control math
 *   VST vs. rlog variance-stabilizing transformation comparisons
 
-The manuscripts folder [`manuscripts/PLOS_ONE_SUBMISSION/`](./manuscripts/PLOS_ONE_SUBMISSION/) contains the revised manuscript draft and supplementary documentation prepared for submission to *PLOS ONE*.
+The manuscripts folder [`manuscripts/`](./manuscripts/) contains the raw submission folder and our new multi-scale revised manuscript draft [`manuscripts/manuscript_draft.md`](./manuscripts/manuscript_draft.md), which integrates transcriptomics with AlphaFold2 and molecular docking to target Q1/Q2 journals.
 
 ---
 
