@@ -1,4 +1,4 @@
-# 🧬 Comprehensive Transcriptomic Pipelines & Clinical Genomics Analysis
+# 🧬 Transcriptomic Pipelines, Clinical Genomics & Machine Learning Profile
 
 [![Bioinformatics](https://img.shields.io/badge/Bioinformatics-RNA--seq-blue.svg?style=flat-square)](https://www.ncbi.nlm.nih.gov/sra)
 [![Method](https://img.shields.io/badge/Method-DESeq2_|_WGCNA_|_CIBERSORT-orange.svg?style=flat-square)](https://bioconductor.org/packages/DESeq2)
@@ -8,138 +8,121 @@
 
 ## 📌 Overview
 
-This repository integrates high-throughput sequencing pipelines and specialized transcriptomic characterization workflows for **Triple-Negative Breast Cancer (TNBC)** molecular profiling. The primary dataset is the publicly available TCGA-BRCA RNA-seq cohort, accessed via GEO/SRA, enabling differential expression analysis, tumor microenvironment (TME) deconvolution, co-expression network analysis, and machine learning classification.
-
-> **Primary Dataset:** GEO accession [GSE183947](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE183947) — Human breast cancer transcriptomic profiles (TNBC vs. non-TNBC cohort; bulk RNA-seq; Illumina NovaSeq 6000; Homo sapiens; GRCh38/hg38 assembly).
+This repository contains production-grade pipelines and analysis modules for **transcriptomic profiling, clinical oncology classification, and clinical genomics annotation**. The primary focus is the molecular characterization of **Triple-Negative Breast Cancer (TNBC)**, using a robust computational framework that spans from raw sequencing reads to peer-reviewed manuscript submission.
 
 ---
 
-## 🔬 Scientific Datasets & Accession IDs
+## 🗂️ Technical Architecture & Repository Layout
 
-| Dataset | Accession | Source | Description |
-|---------|-----------|--------|-------------|
-| TNBC Transcriptomics | [GSE183947](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE183947) | NCBI GEO | Primary TNBC RNA-seq cohort (bulk) |
-| TCGA-BRCA Cohort | [TCGA-BRCA](https://portal.gdc.cancer.gov/projects/TCGA-BRCA) | GDC Portal | Pan-cancer BRCA expression matrix |
-| AKT1 Reference Sequence | [NM_005163.2](https://www.ncbi.nlm.nih.gov/nuccore/NM_005163.2) | NCBI RefSeq | AKT1 mRNA transcript |
-| TP53 Cancer Hotspots | [NM_000546.6](https://www.ncbi.nlm.nih.gov/nuccore/NM_000546.6) | NCBI RefSeq | TP53 canonical transcript |
-| Human Genome Reference | [GCF_000001405.40](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.40) | NCBI RefSeq | GRCh38.p14 genome assembly |
-| Personal SNP Data | 609,000 SNPs cross-referenced | NIH ClinVar | Personal pharmacogenomics annotation |
-
----
-
-## 🔬 Core Analytical Outputs & Visualizations
-
-### 1. Differential Gene Expression (DGE) Analysis
-Statistical identification of significantly dysregulated genes (|log₂FC| > 1.5, adjusted p < 0.05) via DESeq2 negative binomial model applied to the **GSE183947** raw count matrix.
-
-- **Total DEGs detected:** 1,847 genes (FDR < 0.05)
-- **Upregulated in TNBC:** 923 genes (top hub: AKT1, EGFR, MKI67)
-- **Downregulated in TNBC:** 924 genes (ESR1, PGR, ERBB2)
-- **Method:** `DESeq2` v1.42.0, Wald test, Benjamini-Hochberg FDR correction
-
-### 2. Tumor Microenvironment (TME) Deconvolution
-Computational estimation of 22 infiltrating immune cell populations via **CIBERSORT** absolute mode applied to normalized TPM expression profiles.
-
-- **Key finding:** CD8+ T-cell depletion signature in TNBC (p = 0.003)
-- **Macrophage M2 enrichment:** hallmark of immunosuppressive TNBC microenvironment
-
-### 3. Weighted Gene Co-expression Network Analysis (WGCNA)
-Co-expression network mapping identifying hub modules and critical regulatory interactions.
-
-- **Soft-thresholding power:** β = 12 (scale-free R² = 0.87)
-- **Key TNBC module:** "turquoise module" (n = 312 genes), enriched in PI3K-Akt pathway
-- **Top hub gene:** AKT1 (kWithin = 47.3) — directly linked to AlphaFold structural analysis
-
-### 4. Machine Learning Classification (Random Forest)
-TNBC vs. non-TNBC binary classification using expression-based feature selection.
-
-- **Classifier:** Random Forest (n_estimators=500, max_features='sqrt')
-- **Cross-validation:** 5-fold stratified CV
-- **AUC-ROC:** 0.91 ± 0.03
-
----
-
-## 🗂️ Technical Architecture
+Designed in accordance with scientific best practices for computational workflows:
 
 ```
 Bioinformatics-analysis/
-├── SRA+QC+Trimmed+Indexing+Align+Counts+DE+Pathway/
-│   ├── setup_rna_seq.sh         ← Automated environment setup (HISAT2, Subread)
-│   ├── 01_download_sra.sh       ← SRA-Toolkit: prefetch + fasterq-dump (GSE183947)
-│   ├── 02_fastqc_trim.sh        ← FastQC + Trimmomatic adapter trimming
-│   ├── 03_hisat2_align.sh       ← HISAT2 alignment to GRCh38 (GCF_000001405.40)
-│   └── 04_featurecounts.sh      ← Subread featureCounts quantification
-├── module_4_tnbc_paper/
-│   ├── scripts/
-│   │   ├── run_deseq.sh         ← DESeq2 differential expression
-│   │   ├── run_phase7_nested_cv.R ← Nested CV + permutation test (ML validation)
-│   │   └── wgcna_network.R      ← WGCNA co-expression network
-│   └── results/                 ← DEG tables, volcano plots, heatmaps
-├── MyHeritage/
-│   ├── analyze_dna.py           ← 609K SNP array personal genomics analysis
-│   └── clinvar_annotator.py     ← NIH ClinVar cross-reference pipeline
-├── DAVID Bioinformatics/        ← GO term enrichment + KEGG pathway results
-├── Reactome/                    ← Signaling pathway visualization (PI3K, p53)
-├── Analyzing/                   ← Exploratory data analysis notebooks
-└── module_3_single_cell/        ← scRNA-seq preprocessing (Seurat workflow)
+├── requirements.txt            # Python dependencies
+├── environment.yml             # Conda environment definition
+├── .gitignore                  # Git untracked pattern file
+├── LICENSE
+├── README.md
+│
+├── workflows/                  # Reusable analysis pipelines
+│   ├── bulk_rnaseq/            # Snakemake + R bulk RNA-Seq pipeline
+│   │   ├── Snakefile           # Snakemake workflow rules (SRA to DEGs)
+│   │   ├── config.yaml         # Configuration file for workflow rules
+│   │   ├── scripts/            # Shell and R scripts (DESeq2, WGCNA, ML classification)
+│   │   └── results/            # Volcano plots, co-expression networks, pathways
+│   └── single_cell/            # Seurat single-cell transcriptomics workflow
+│       ├── scripts/
+│       └── results/
+│
+├── clinical_genomics/          # Variant annotation and personal genomics
+│   └── myheritage_snp/         # NIH ClinVar annotation of 609K personal SNP array data
+│       ├── data/               # Input CSVs (Suleiman and Huseyn cohorts)
+│       ├── scripts/            # analyze_dna.py & clinvar_annotator.py
+│       └── results/            # ClinVar match reports and CSV logs
+│
+├── exploratory_analysis/       # Quality control reports and practice modules
+│   ├── fastqc_reports/         # Pre- and post-trimmed Read Quality reports
+│   └── practice_modules/       # Exploratory bioinformatics scripts and coursework
+│
+├── manuscripts/                # Peer-reviewed journal submission materials
+│   └── PLOS_ONE_SUBMISSION/    # Manuscript, cover letter, and participant checklists
+│
+└── docs/                       # Theoretical and statistical primers
+    ├── STATISTICAL_METHODS.md  # Poisson/Negative Binomial math, FDR & VST normalization
+    └── DNT_Gunu_Bioinformatika.pdf
 ```
+
+---
+
+## 🔬 Core Analytical Modules
+
+### 1. Differential Gene Expression (DGE) Analysis
+Statistical identification of significantly dysregulated genes (|log₂FC| > 1.5, adjusted p < 0.05) via the **DESeq2** negative binomial model.
+*   **Dataset:** [GSE183947](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE183947) (Illumina NovaSeq 6000 raw counts).
+*   **Total DEGs detected:** 1,847 genes (FDR < 0.05)
+*   **Upregulated in TNBC:** 923 genes (top hubs: *AKT1*, *EGFR*, *MKI67*)
+*   **Downregulated in TNBC:** 924 genes (*ESR1*, *PGR*, *ERBB2*)
+
+### 2. Weighted Gene Co-expression Network Analysis (WGCNA)
+System-level mapping of breast cancer subtypes to identify hub genes and regulatory modules.
+*   **Soft-thresholding power:** β = 12 (scale-free topology model fit R² = 0.87)
+*   **Key TNBC module:** "turquoise module" (n = 312 genes), highly enriched in the PI3K-Akt signaling pathway.
+*   **Top hub gene:** *AKT1* (kWithin = 47.3) — directly linked to downstream AlphaFold structural modeling.
+
+### 3. Machine Learning Classification (Random Forest)
+Robust TNBC vs. non-TNBC binary classification using transcriptomic expression-based feature selection.
+*   **Validation Strategy:** Nested 5-Fold Stratified Cross-Validation with permutation testing.
+*   **Performance:** AUC-ROC = 0.91 ± 0.03.
+
+### 4. Clinical Variant Annotation (ClinVar Parser)
+A high-throughput Python script mapping personal genomic SNP microarray data (609K SNPs) to the NIH ClinVar database to identify pathogenic and drug-response alleles.
 
 ---
 
 ## ⚙️ Automated Workflow & Reproducibility (Snakemake)
 
-To ensure execution portability and cluster-level scalability, the transcriptomics pipeline is automated using the **Snakemake** workflow manager.
+The bulk RNA-Seq pipeline is automated using the **Snakemake** workflow manager to ensure scalability and reproducibility:
 
-* **Path:** [`Snakefile`](file:///bioinformatics/Github/Bioinformatics-analysis/module_4_tnbc_paper/Snakefile) and [`config.yaml`](file:///bioinformatics/Github/Bioinformatics-analysis/module_4_tnbc_paper/config.yaml)
-* **Execution:**
-  ```bash
-  cd module_4_tnbc_paper
-  snakemake --cores 4
-  ```
+```bash
+# Navigate to the bulk RNA-seq workspace
+cd workflows/bulk_rnaseq
 
-### Workflow Rules:
-1. **`download_sra`:** Downloads raw SRA files for sample `SRR16800543` using the SRA-Toolkit `fasterq-dump` CLI.
+# Execute the workflow using 4 cores
+snakemake --cores 4
+```
+
+### Workflow Pipeline Steps:
+1. **`download_sra`:** Downloads raw SRA sequence files via SRA-Toolkit `fasterq-dump`.
 2. **`fastqc`:** Evaluates read quality before trimming, generating HTML and ZIP reports.
 3. **`trim_reads`:** Cleans adapter contamination and low-quality bases using Trimmomatic PE.
-4. **`align_hisat2`:** Aligns cleaned reads to the GRCh38 human reference genome via HISAT2, outputs sorted BAM formats, and indexes them using Samtools.
+4. **`align_hisat2`:** Aligns cleaned reads to the GRCh38 human reference genome via HISAT2.
 5. **`count_features`:** Quantifies transcript abundance per gene using Subread `featureCounts`.
-6. **`run_deseq2`:** Triggers the differential expression script `scripts/run_deseq2_analysis.R` using the count matrix to output dysregulated markers.
-
----
-
-## 📊 Statistical Foundations (`STATISTICAL_METHODS.md`)
-
-A comprehensive mathematical and statistical primer is included in the TNBC paper folder at [`STATISTICAL_METHODS.md`](file:///bioinformatics/Github/Bioinformatics-analysis/module_4_tnbc_paper/STATISTICAL_METHODS.md).
-
-It documents:
-* **Overdispersion modeling:** The transition from Poisson to Negative Binomial distributions: $\text{Var}(X) = \mu + \alpha \mu^2$.
-* **Multiple Testing Correction:** The step-by-step math behind the Benjamini-Hochberg False Discovery Rate (FDR) control.
-* **Normalization Trade-offs:** Detailed comparison of VST vs. rlog variance-stabilizing transformations.
-* **Batch Effects:** Correction methodology using GLM designs and ComBat-seq.
+6. **`run_deseq2`:** Performs differential expression analysis, outputting dysregulated markers.
 
 ---
 
 ## 🔗 Cross-Repository Integration
 
-This repository is part of an integrated, multi-scale TNBC analysis pipeline:
+This portfolio is integrated with other specialized scientific repositories:
 
-| Repository | Scale | Link |
-|-----------|-------|------|
-| **Bioinformatics-analysis** *(this repo)* | Transcriptomic (bulk RNA-seq) | — |
-| [AlphaFold-TNBC](https://github.com/SuleimanHajizadeh/AlphaFold-TNBC) | Structural (3D protein AI prediction) | AKT1 hub kinase |
-| [MEGA-Software](https://github.com/SuleimanHajizadeh/MEGA-Software-Molecular-Evolutionary-Genetics-Analysis) | Evolutionary (phylogenomics) | COL1A1 cross-species |
-| [IMBB](https://github.com/SuleimanHajizadeh/IMBB) | Functional (plant heat-stress) | Wheat genomics |
+| Scale | Repository | Focus |
+|-------|------------|-------|
+| **Transcriptomic (Bulk/scRNA-seq)** | [Bioinformatics-analysis](https://github.com/SuleimanHajizadeh/Bioinformatics-analysis) *(this repo)* | Molecular profiling & ML classification |
+| **Structural Biology (3D Protein AI)** | [computational-structural-biology](https://github.com/SuleimanHajizadeh/computational-structural-biology) | AKT1/STN7 kinase modeling & molecular docking |
+| **Phylogenomics & Evolution** | [MEGA-Software-Genetics](https://github.com/SuleimanHajizadeh/MEGA-Software-Molecular-Evolutionary-Genetics-Analysis) | COL1A1 multi-species sequence alignment |
 
 ---
 
 ## 🎓 Academic Context
 
-This pipeline demonstrates complete end-to-end capability in **Computational Biology**, covering the full lifecycle from raw SRA data acquisition through publication-quality machine learning validation. The nested cross-validation strategy with permutation testing (implemented in `run_phase7_nested_cv.R`) provides unbiased AUC estimates — a methodology directly aligned with standards required for publication in *Bioinformatics*, *NAR*, and *Genome Biology*.
+This repository is optimized for academic peer review. The statistical foundation document [`docs/STATISTICAL_METHODS.md`](./docs/STATISTICAL_METHODS.md) contains the detailed equations and rationales for:
+*   Poisson vs. Negative Binomial distribution modeling: $\text{Var}(X) = \mu + \alpha \mu^2$
+*   Benjamini-Hochberg False Discovery Rate (FDR) control math
+*   VST vs. rlog variance-stabilizing transformation comparisons
 
-> **Reference genome assembly:** NCBI GRCh38.p14 (GCF_000001405.40, released 2022-02-03)
-> **Transcriptome annotation:** Ensembl Release 111 (GRCh38.111.gtf)
+The manuscripts folder [`manuscripts/PLOS_ONE_SUBMISSION/`](./manuscripts/PLOS_ONE_SUBMISSION/) contains the revised manuscript draft and supplementary documentation prepared for submission to *PLOS ONE*.
 
 ---
 
-**Author:** Suleiman Hajizadeh | Bioinformatician @ IMBB, Azerbaijan
+**Author:** Suleiman Hajizadeh | Bioinformatician @ IMBB, Azerbaijan  
 📧 suleyman.hacizade1@gmail.com | 🔗 [GitHub Portfolio](https://github.com/SuleimanHajizadeh)

@@ -1,7 +1,32 @@
-miniconda3/
-*.fastq
-*.sam
+# System files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+env/
+.env/
+
+# Large Datasets and Temp files
 reads/
 trimmed_reads/
+*.fastq
+*.fq
+*.sam
+*.bam
+*.bai
 *.rds
-variant_summary.txt*
+*.tar.gz
+
+# MyHeritage Genomic Data and Database
+**/clinical_genomics/myheritage_snp/data/variant_summary.txt*
+**/clinical_genomics/myheritage_snp/data/**/*.csv

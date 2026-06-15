@@ -1,0 +1,15 @@
+name: bioinformatics-env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - snakemake
+  - r-base
+  - r-deseq2
+  - r-wgcna
