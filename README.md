@@ -8,7 +8,7 @@
 
 ## 📌 Overview
 
-This repository contains production-grade pipelines and analysis modules for **transcriptomic profiling, clinical oncology classification, and clinical genomics annotation**. The primary focus is the molecular characterization of **Triple-Negative Breast Cancer (TNBC)**, using a robust computational framework that spans from raw sequencing reads to peer-reviewed manuscript submission.
+This repository contains production-grade pipelines and analysis modules for **transcriptomic profiling, clinical oncology classification, and clinical genomics annotation**. The primary focus is the molecular characterization of **Triple-Negative Breast Cancer (TNBC)**, using a robust computational framework that spans from raw sequencing reads to statistical data analysis.
 
 ---
 
@@ -44,8 +44,7 @@ Bioinformatics-analysis/
 │   ├── fastqc_reports/         # Pre- and post-trimmed Read Quality reports
 │   └── practice_modules/       # Exploratory bioinformatics scripts and coursework
 │
-├── manuscripts/                # Peer-reviewed journal submission materials
-│   └── PLOS_ONE_SUBMISSION/    # Manuscript, cover letter, and participant checklists
+├── manuscripts/                # Manuscript drafts and research outlines
 │
 └── docs/                       # Theoretical and statistical primers
     ├── STATISTICAL_METHODS.md  # Poisson/Negative Binomial math, FDR & VST normalization
@@ -153,12 +152,12 @@ This portfolio is integrated with other specialized scientific repositories:
 
 ## 🎓 Academic Context
 
-This repository is optimized for academic peer review. The statistical foundation document [`docs/STATISTICAL_METHODS.md`](./docs/STATISTICAL_METHODS.md) contains the detailed equations and rationales for:
+This repository is optimized for academic analysis. The statistical foundation document [`docs/STATISTICAL_METHODS.md`](./docs/STATISTICAL_METHODS.md) contains the detailed equations and rationales for:
 *   Poisson vs. Negative Binomial distribution modeling: $\text{Var}(X) = \mu + \alpha \mu^2$
 *   Benjamini-Hochberg False Discovery Rate (FDR) control math
 *   VST vs. rlog variance-stabilizing transformation comparisons
 
-The manuscripts folder [`manuscripts/`](./manuscripts/) contains the raw submission folder and our new multi-scale revised manuscript draft [`manuscripts/manuscript_draft.md`](./manuscripts/manuscript_draft.md), which integrates transcriptomics with AlphaFold2 and molecular docking to target Q1/Q2 journals.
+The manuscripts folder [`manuscripts/`](./manuscripts/) contains our multi-scale manuscript draft [`manuscripts/manuscript_draft.md`](./manuscripts/manuscript_draft.md), which integrates transcriptomics with AlphaFold2 and molecular docking to target Q1/Q2 journals.
 
 ---
 
