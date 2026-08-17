@@ -58,3 +58,16 @@ Each entry follows the parseable format:
 ## [2026-08-17] synthesis | Multi-Omics and Translational Bioinformatics Ecosystem
 - Generated overarching cross-pipeline synthesis: [[multi-omics-analytical-ecosystem]]
 - Linked bulk RNA-seq, single-cell resolution transcriptomics, and personal clinical genomics.
+
+## [2026-08-17] ingest | PLOS ONE Manuscript Draft - Multi-Scale TNBC & AKT1 Pipeline
+- **Source**: `manuscripts/manuscript_draft.md`
+- **Summary**: [[tnbc-akt1-alphafold-docking-manuscript]]
+- **Entities/Concepts Touched/Created**:
+  - Concept: [[alphafold-structural-modeling]]
+  - Concept: [[molecular-docking-virtual-screening]]
+  - Entity: [[akt1-kinase]]
+  - Entity: [[alphafold2]]
+  - Entity: [[autodock-vina]]
+  - Entity: [[mk-2206]]
+  - Synthesis: [[transcriptome-to-structure-drug-discovery]]
+- **Updated Catalog**: [[index|wiki/index.md]]

@@ -8,10 +8,10 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 
 | Section | Description | Item Count |
 | :--- | :--- | :--- |
-| **[[#Concepts\|Concepts]]** | Theoretical foundations, algorithms, statistical principles | 8 |
-| **[[#Entities\|Entities]]** | Software tools, packages, databases, diseases, algorithms | 8 |
-| **[[#Syntheses\|Syntheses]]** | Cross-domain summaries, multi-source frameworks, theses | 2 |
-| **[[#Summaries\|Summaries]]** | Source-specific summaries linking back to `raw/` and codebase | 5 |
+| **[[#Concepts\|Concepts]]** | Theoretical foundations, algorithms, statistical & biophysical principles | 10 |
+| **[[#Entities\|Entities]]** | Software tools, packages, databases, genes, drugs, algorithms | 12 |
+| **[[#Syntheses\|Syntheses]]** | Cross-domain summaries, multi-source frameworks, theses | 3 |
+| **[[#Summaries\|Summaries]]** | Source-specific summaries linking back to `raw/` and codebase | 6 |
 
 ---
 
@@ -25,6 +25,8 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[single-cell-clustering-umap]]: 10x Genomics scRNA-seq workflow (QC, VST variable genes, PCA, Louvain graph clustering, UMAP).
 - [[immune-deconvolution-tme]]: In silico digital pathology deconvolution of tumor microenvironment cell populations.
 - [[variant-pathogenicity-annotation]]: Mapping personal genomic SNP arrays against NIH ClinVar for clinical significance and pharmacogenomics.
+- [[alphafold-structural-modeling]]: 3D macromolecular prediction, pLDDT local accuracy, PAE inter-domain metrics, and Ramachandran validation.
+- [[molecular-docking-virtual-screening]]: Physics of binding affinity ($\Delta G_{\text{bind}}$), allosteric vs. orthosteric inhibition, and virtual screening.
 
 ---
 
@@ -38,6 +40,10 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[seurat]]: Leading R toolkit for single-cell genomics, QC, multimodal integration, and clustering.
 - [[clinvar]]: NCBI public archive of human genetic variants, clinical assertions, and evidence tiers.
 - [[random-forest-classifier]]: Ensemble tree classifier with permutation testing for robust transcriptomic biomarker discovery.
+- [[akt1-kinase]]: RAC-alpha serine/threonine-protein kinase (UniProt P31749) master oncogenic hub in TNBC.
+- [[alphafold2]]: DeepMind neural structural prediction system.
+- [[autodock-vina]]: Fast, accurate molecular docking and virtual screening engine.
+- [[mk-2206]]: Potent, highly selective allosteric inhibitor of AKT kinases ($\Delta G = -9.4\text{ kcal/mol}$).
 
 ---
 
@@ -45,6 +51,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 
 - [[transcriptomic-analysis-framework]]: Unified end-to-end framework linking raw counts, count modeling, WGCNA, and ML classification.
 - [[multi-omics-analytical-ecosystem]]: Cross-layer synthesis connecting bulk RNA-Seq, single-cell resolution transcriptomics, and personal clinical genomics.
+- [[transcriptome-to-structure-drug-discovery]]: Multi-scale framework connecting whole-genome RNA-Seq co-expression networks to AlphaFold structural biology and virtual docking.
 
 ---
 
@@ -55,6 +62,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[tnbc-analytics-suite]]: Ingestion of Phases 5–9 downstream R analytics (DESeq2, clusterProfiler, Nested CV Random Forest, iGraph/WGCNA, CIBERSORTx).
 - [[single-cell-seurat-workflow]]: Ingestion of the Seurat single-cell transcriptomics pipeline (`workflows/single_cell/scripts/`).
 - [[clinical-genomics-pipeline]]: Ingestion of personal SNP array analysis and ClinVar variant annotation scripts (`clinical_genomics/myheritage_snp/scripts/`).
+- [[tnbc-akt1-alphafold-docking-manuscript]]: Ingestion of the PLOS ONE manuscript connecting TNBC RNA-Seq, WGCNA, AlphaFold2 AKT1 modeling, and AutoDock Vina inhibitor screening (`manuscripts/manuscript_draft.md`).
 
 ---
 
