@@ -79,7 +79,7 @@ Each entry follows the parseable format:
 
 ## [2026-08-17] lint | Comprehensive Graph Health Audit
 - **Total Pages Scanned**: 34 markdown pages
-- **Broken Links**: 0 broken `[[wikilinks]]`
+- **Broken Links**: 0 broken internal wikilinks
 - **Orphan Nodes**: 0 isolated pages (all pages have $\ge 3$ inbound connections)
 - **Top Graph Hubs**: `deseq2` (21), `triple-negative-breast-cancer` (18), `statistical-methods-primer` (16), `tnbc-akt1-alphafold-docking-manuscript` (15), `wgcna-coexpression-networks` (14), `akt1-kinase` (14), `variance-stabilizing-transformation` (13).
 
@@ -93,4 +93,19 @@ Each entry follows the parseable format:
 - **Concepts Added**: [[pi3k-akt-mtor-signaling-pathway]]
 - **Entities Added**: [[ipatasertib]], [[pembrolizumab]]
 - **Synthesis Generated**: [[tnbc-targeted-and-immune-therapeutics]]
+- **Updated Catalog**: [[index|wiki/index.md]]
+
+## [2026-08-17] synthesis | Comprehensive Genomics, HRD, and Pharmacogenomics Expansion
+- **Concepts Added**:
+  - [[pathway-enrichment-gsea]]
+  - [[homologous-recombination-deficiency-brca]]
+  - [[pharmacogenomics-drug-metabolism]]
+  - [[quality-control-adapter-trimming]]
+- **Entities Added**:
+  - [[clusterprofiler]]
+  - [[brca1-brca2]]
+  - [[fastqc-trimmomatic]]
+  - [[cyp1a2]]
+  - [[comt]]
+- **Synthesis Generated**: [[personal-pharmacogenomics-and-clinical-actionability]]
 - **Updated Catalog**: [[index|wiki/index.md]]

@@ -8,9 +8,9 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 
 | Section | Description | Item Count |
 | :--- | :--- | :--- |
-| **[[#Concepts\|Concepts]]** | Theoretical foundations, algorithms, statistical & biophysical principles | 11 |
-| **[[#Entities\|Entities]]** | Software tools, packages, databases, genes, drugs, cell lines, algorithms | 15 |
-| **[[#Syntheses\|Syntheses]]** | Cross-domain summaries, multi-source frameworks, theses | 4 |
+| **[[#Concepts\|Concepts]]** | Theoretical foundations, algorithms, statistical & biophysical principles | 15 |
+| **[[#Entities\|Entities]]** | Software tools, packages, databases, genes, drugs, cell lines, algorithms | 20 |
+| **[[#Syntheses\|Syntheses]]** | Cross-domain summaries, multi-source frameworks, theses | 5 |
 | **[[#Summaries\|Summaries]]** | Source-specific summaries linking back to `raw/` and codebase | 7 |
 
 ---
@@ -28,6 +28,10 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[alphafold-structural-modeling]]: 3D macromolecular prediction, pLDDT local accuracy, PAE inter-domain metrics, and Ramachandran validation.
 - [[molecular-docking-virtual-screening]]: Physics of binding affinity ($\Delta G_{\text{bind}}$), allosteric vs. orthosteric inhibition, and virtual screening.
 - [[pi3k-akt-mtor-signaling-pathway]]: Molecular cascade from RTKs and PIP3 second messengers to AKT1, mTORC1, cell cycle, and apoptosis control.
+- [[pathway-enrichment-gsea]]: Over-Representation Analysis (ORA) vs. Gene Set Enrichment Analysis (GSEA) statistics.
+- [[homologous-recombination-deficiency-brca]]: BRCAness, double-strand break repair failure, and synthetic lethality via PARP trapping.
+- [[pharmacogenomics-drug-metabolism]]: CPIC guidelines, Phase I/II ADME metabolism, and adverse drug reaction profiling.
+- [[quality-control-adapter-trimming]]: Phred quality score calculation, Illumina adapter clipping, and sliding window filtering.
 
 ---
 
@@ -49,6 +53,11 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[ipatasertib]]: Orally bioavailable ATP-competitive pan-AKT inhibitor ($\Delta G = -8.2\text{ kcal/mol}$).
 - [[hcc1395-cell-line]]: Gold-standard SEQC2 reference TNBC cell line and matched normal B-lymphoblastoid pair (HCC1395BL).
 - [[pembrolizumab]]: Anti-PD-1 humanized monoclonal antibody approved in high-risk early and metastatic TNBC.
+- [[clusterprofiler]]: Bioconductor R package for functional enrichment and GSEA.
+- [[brca1-brca2]]: Hereditary breast/ovarian cancer tumor suppressors and double-strand break repair effectors.
+- [[fastqc-trimmomatic]]: High-throughput sequencing read quality assessment and adapter trimming engine.
+- [[cyp1a2]]: Cytochrome P450 enzyme regulating caffeine, theophylline, and drug clearance.
+- [[comt]]: Catechol-O-methyltransferase regulating prefrontal dopamine levels and "Worrier vs. Warrior" cognitive traits.
 
 ---
 
@@ -58,6 +67,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[multi-omics-analytical-ecosystem]]: Cross-layer synthesis connecting bulk RNA-Seq, single-cell resolution transcriptomics, and personal clinical genomics.
 - [[transcriptome-to-structure-drug-discovery]]: Multi-scale framework connecting whole-genome RNA-Seq co-expression networks to AlphaFold structural biology and virtual docking.
 - [[tnbc-targeted-and-immune-therapeutics]]: Precision oncology synthesis evaluating AKT inhibitors, checkpoint blockade, and PARP inhibitors in TNBC.
+- [[personal-pharmacogenomics-and-clinical-actionability]]: Translating direct-to-consumer microarray data into actionable CPIC-guided clinical pharmacogenomics.
 
 ---
 
