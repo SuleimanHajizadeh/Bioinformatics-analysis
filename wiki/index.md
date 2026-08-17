@@ -80,6 +80,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[clinical-genomics-pipeline]]: Ingestion of personal SNP array analysis and ClinVar variant annotation scripts (`clinical_genomics/myheritage_snp/scripts/`).
 - [[tnbc-akt1-alphafold-docking-manuscript]]: Ingestion of the PLOS ONE manuscript connecting TNBC RNA-Seq, WGCNA, AlphaFold2 AKT1 modeling, and AutoDock Vina inhibitor screening (`manuscripts/manuscript_draft.md`).
 - [[hcc1395-rnaseq-benchmark]]: Ingestion of the FDA SEQC2 reference cell line benchmarking scripts (`exploratory_analysis/practice_modules/module_2/scripts/deseq2_analysis.R`).
+- [[repository-architecture-and-file-guide]]: Complete master file and directory architecture documentation (`docs/REPOSITORY_DOCUMENTATION.md`).
 
 ---
 

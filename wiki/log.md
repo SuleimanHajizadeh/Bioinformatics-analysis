@@ -109,3 +109,8 @@ Each entry follows the parseable format:
   - [[comt]]
 - **Synthesis Generated**: [[personal-pharmacogenomics-and-clinical-actionability]]
 - **Updated Catalog**: [[index|wiki/index.md]]
+
+## [2026-08-17] ingest | Repository Architecture and File Documentation
+- **Source**: `docs/REPOSITORY_DOCUMENTATION.md`
+- **Summary**: [[repository-architecture-and-file-guide]]
+- **Updated Catalog**: [[index|wiki/index.md]]
