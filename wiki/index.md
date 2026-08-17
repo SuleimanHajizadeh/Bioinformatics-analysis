@@ -40,6 +40,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[seurat]]: Leading R toolkit for single-cell genomics, QC, multimodal integration, and clustering.
 - [[clinvar]]: NCBI public archive of human genetic variants, clinical assertions, and evidence tiers.
 - [[random-forest-classifier]]: Ensemble tree classifier with permutation testing for robust transcriptomic biomarker discovery.
+- [[bioinformatics-hpc-environment]]: Enterprise Linux HPC software stack, math acceleration libraries (Armadillo, SuperLU), and toolchains.
 - [[akt1-kinase]]: RAC-alpha serine/threonine-protein kinase (UniProt P31749) master oncogenic hub in TNBC.
 - [[alphafold2]]: DeepMind neural structural prediction system.
 - [[autodock-vina]]: Fast, accurate molecular docking and virtual screening engine.

@@ -71,3 +71,14 @@ Each entry follows the parseable format:
   - Entity: [[mk-2206]]
   - Synthesis: [[transcriptome-to-structure-drug-discovery]]
 - **Updated Catalog**: [[index|wiki/index.md]]
+
+## [2026-08-17] ingest | HPC Compute Infrastructure & Software Stack
+- **Source**: `docs/installed applications of centos.txt`
+- **Entities Touched/Created**: [[bioinformatics-hpc-environment]]
+- **Updated Catalog**: [[index|wiki/index.md]]
+
+## [2026-08-17] lint | Comprehensive Graph Health Audit
+- **Total Pages Scanned**: 34 markdown pages
+- **Broken Links**: 0 broken `[[wikilinks]]`
+- **Orphan Nodes**: 0 isolated pages (all pages have $\ge 3$ inbound connections)
+- **Top Graph Hubs**: `deseq2` (21), `triple-negative-breast-cancer` (18), `statistical-methods-primer` (16), `tnbc-akt1-alphafold-docking-manuscript` (15), `wgcna-coexpression-networks` (14), `akt1-kinase` (14), `variance-stabilizing-transformation` (13).
