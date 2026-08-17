@@ -8,10 +8,10 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 
 | Section | Description | Item Count |
 | :--- | :--- | :--- |
-| **[[#Concepts\|Concepts]]** | Theoretical foundations, algorithms, statistical & biophysical principles | 10 |
-| **[[#Entities\|Entities]]** | Software tools, packages, databases, genes, drugs, algorithms | 12 |
-| **[[#Syntheses\|Syntheses]]** | Cross-domain summaries, multi-source frameworks, theses | 3 |
-| **[[#Summaries\|Summaries]]** | Source-specific summaries linking back to `raw/` and codebase | 6 |
+| **[[#Concepts\|Concepts]]** | Theoretical foundations, algorithms, statistical & biophysical principles | 11 |
+| **[[#Entities\|Entities]]** | Software tools, packages, databases, genes, drugs, cell lines, algorithms | 15 |
+| **[[#Syntheses\|Syntheses]]** | Cross-domain summaries, multi-source frameworks, theses | 4 |
+| **[[#Summaries\|Summaries]]** | Source-specific summaries linking back to `raw/` and codebase | 7 |
 
 ---
 
@@ -27,6 +27,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[variant-pathogenicity-annotation]]: Mapping personal genomic SNP arrays against NIH ClinVar for clinical significance and pharmacogenomics.
 - [[alphafold-structural-modeling]]: 3D macromolecular prediction, pLDDT local accuracy, PAE inter-domain metrics, and Ramachandran validation.
 - [[molecular-docking-virtual-screening]]: Physics of binding affinity ($\Delta G_{\text{bind}}$), allosteric vs. orthosteric inhibition, and virtual screening.
+- [[pi3k-akt-mtor-signaling-pathway]]: Molecular cascade from RTKs and PIP3 second messengers to AKT1, mTORC1, cell cycle, and apoptosis control.
 
 ---
 
@@ -45,6 +46,9 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[alphafold2]]: DeepMind neural structural prediction system.
 - [[autodock-vina]]: Fast, accurate molecular docking and virtual screening engine.
 - [[mk-2206]]: Potent, highly selective allosteric inhibitor of AKT kinases ($\Delta G = -9.4\text{ kcal/mol}$).
+- [[ipatasertib]]: Orally bioavailable ATP-competitive pan-AKT inhibitor ($\Delta G = -8.2\text{ kcal/mol}$).
+- [[hcc1395-cell-line]]: Gold-standard SEQC2 reference TNBC cell line and matched normal B-lymphoblastoid pair (HCC1395BL).
+- [[pembrolizumab]]: Anti-PD-1 humanized monoclonal antibody approved in high-risk early and metastatic TNBC.
 
 ---
 
@@ -53,6 +57,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[transcriptomic-analysis-framework]]: Unified end-to-end framework linking raw counts, count modeling, WGCNA, and ML classification.
 - [[multi-omics-analytical-ecosystem]]: Cross-layer synthesis connecting bulk RNA-Seq, single-cell resolution transcriptomics, and personal clinical genomics.
 - [[transcriptome-to-structure-drug-discovery]]: Multi-scale framework connecting whole-genome RNA-Seq co-expression networks to AlphaFold structural biology and virtual docking.
+- [[tnbc-targeted-and-immune-therapeutics]]: Precision oncology synthesis evaluating AKT inhibitors, checkpoint blockade, and PARP inhibitors in TNBC.
 
 ---
 
@@ -64,6 +69,7 @@ Welcome to the **LLM Wiki** — a persistent, compounding knowledge base for tra
 - [[single-cell-seurat-workflow]]: Ingestion of the Seurat single-cell transcriptomics pipeline (`workflows/single_cell/scripts/`).
 - [[clinical-genomics-pipeline]]: Ingestion of personal SNP array analysis and ClinVar variant annotation scripts (`clinical_genomics/myheritage_snp/scripts/`).
 - [[tnbc-akt1-alphafold-docking-manuscript]]: Ingestion of the PLOS ONE manuscript connecting TNBC RNA-Seq, WGCNA, AlphaFold2 AKT1 modeling, and AutoDock Vina inhibitor screening (`manuscripts/manuscript_draft.md`).
+- [[hcc1395-rnaseq-benchmark]]: Ingestion of the FDA SEQC2 reference cell line benchmarking scripts (`exploratory_analysis/practice_modules/module_2/scripts/deseq2_analysis.R`).
 
 ---
 

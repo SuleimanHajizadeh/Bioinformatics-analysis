@@ -82,3 +82,15 @@ Each entry follows the parseable format:
 - **Broken Links**: 0 broken `[[wikilinks]]`
 - **Orphan Nodes**: 0 isolated pages (all pages have $\ge 3$ inbound connections)
 - **Top Graph Hubs**: `deseq2` (21), `triple-negative-breast-cancer` (18), `statistical-methods-primer` (16), `tnbc-akt1-alphafold-docking-manuscript` (15), `wgcna-coexpression-networks` (14), `akt1-kinase` (14), `variance-stabilizing-transformation` (13).
+
+## [2026-08-17] ingest | HCC1395 Breast Cancer RNA-Seq Benchmark
+- **Source**: `exploratory_analysis/practice_modules/module_2/scripts/deseq2_analysis.R`
+- **Summary**: [[hcc1395-rnaseq-benchmark]]
+- **Entities Touched/Created**: [[hcc1395-cell-line]]
+- **Updated Catalog**: [[index|wiki/index.md]]
+
+## [2026-08-17] synthesis | Precision Therapeutics & PI3K-Akt Pathway Expansion
+- **Concepts Added**: [[pi3k-akt-mtor-signaling-pathway]]
+- **Entities Added**: [[ipatasertib]], [[pembrolizumab]]
+- **Synthesis Generated**: [[tnbc-targeted-and-immune-therapeutics]]
+- **Updated Catalog**: [[index|wiki/index.md]]
