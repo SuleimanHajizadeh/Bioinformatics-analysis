@@ -24,3 +24,37 @@ Each entry follows the parseable format:
   - Entity: [[triple-negative-breast-cancer]]
   - Synthesis: [[transcriptomic-analysis-framework]]
 - **Updated Catalog**: [[index|wiki/index.md]]
+
+## [2026-08-17] ingest | Codebase - Bulk RNA-Seq Pipeline & Snakemake
+- **Source**: `workflows/bulk_rnaseq/Snakefile` & `config.yaml`
+- **Summary**: [[bulk-rnaseq-snakemake-pipeline]]
+- **Entities/Concepts Touched/Created**:
+  - Entity: [[snakemake]]
+  - Entity: [[hisat2]]
+  - Entity: [[featurecounts]]
+
+## [2026-08-17] ingest | Codebase - TNBC Advanced Analytics Suite (Phases 5-9)
+- **Source**: `workflows/bulk_rnaseq/scripts/`
+- **Summary**: [[tnbc-analytics-suite]]
+- **Entities/Concepts Touched/Created**:
+  - Concept: [[nested-cross-validation-ml]]
+  - Concept: [[immune-deconvolution-tme]]
+  - Entity: [[random-forest-classifier]]
+
+## [2026-08-17] ingest | Codebase - Single-Cell Seurat Pipeline
+- **Source**: `workflows/single_cell/scripts/`
+- **Summary**: [[single-cell-seurat-workflow]]
+- **Entities/Concepts Touched/Created**:
+  - Concept: [[single-cell-clustering-umap]]
+  - Entity: [[seurat]]
+
+## [2026-08-17] ingest | Codebase - Clinical Genomics & ClinVar Parser
+- **Source**: `clinical_genomics/myheritage_snp/scripts/`
+- **Summary**: [[clinical-genomics-pipeline]]
+- **Entities/Concepts Touched/Created**:
+  - Concept: [[variant-pathogenicity-annotation]]
+  - Entity: [[clinvar]]
+
+## [2026-08-17] synthesis | Multi-Omics and Translational Bioinformatics Ecosystem
+- Generated overarching cross-pipeline synthesis: [[multi-omics-analytical-ecosystem]]
+- Linked bulk RNA-seq, single-cell resolution transcriptomics, and personal clinical genomics.
