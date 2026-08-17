@@ -182,5 +182,24 @@
     }
   },
   "active": "c1557d4c344c4e65",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "wiki/log.md",
+    "wiki/index.md",
+    "wiki/synthesis/transcriptomic-analysis-framework.md",
+    "wiki/synthesis",
+    "wiki/entities/triple-negative-breast-cancer.md",
+    "wiki/entities/deseq2.md",
+    "wiki/entities",
+    "wiki/concepts/wgcna-coexpression-networks.md",
+    "wiki/concepts/variance-stabilizing-transformation.md",
+    "wiki/concepts/multiple-testing-fdr.md",
+    "wiki/concepts/negative-binomial-model.md",
+    "wiki/concepts",
+    "wiki/summaries/statistical-methods-primer.md",
+    "wiki/summaries",
+    "wiki",
+    "raw/README.md",
+    "raw",
+    "AGENTS.md"
+  ]
 }
